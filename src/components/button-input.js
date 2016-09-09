@@ -1,8 +1,8 @@
 import React from 'react';
-import StateProvider from './state-provider';
+import ReadAndWrite from '../system/components/read-and-write-state';
 
 const Button = (state) => {
-	return <button onClick={state.publish}> {state.text} </button>
+	return <button onClick={state.handleEvent}> {state.text} </button>
 }
 
-export default StateProvider(Button)
+export default ReadAndWrite(Button)

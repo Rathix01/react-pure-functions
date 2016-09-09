@@ -1,8 +1,8 @@
 import React from 'react';
-import StateProvider from './state-provider';
+import ReadAndWrite from '../system/components/read-and-write-state';
 
 const TextInput = (state) => {
-	return <input type='text' onChange={state.publish} value={state.value || ""} />
+	return <input type='text' onChange={state.handleEvent} value={state.value || ""} />
 }
 
-export default StateProvider(TextInput)
+export default ReadAndWrite(TextInput)
